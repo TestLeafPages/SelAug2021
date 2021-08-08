@@ -1,0 +1,224 @@
+Day1 session:08-08-2021
+=============
+# Why java?
+# WORA - Write Once Run Anywhere
+     - PlatformInDependency ( .class/Byte code)
+
+# IDE - netBeans, eclipse, IJ
+
+# How much do I need JAVA for test automation?
+
+# Step 1:
+ Set up the enviroment: 
+    Install Java and Eclipse
+
+ Eclipse: 
+   Explain about the editor, console.
+   Create a Maven project, Package, class
+   Groupid : 
+   Artifact id : 
+
+# Naming conventions for class:(Pascal case)
+          - Pascal Case (PascalCase): In this the first letter of every word is in capital letter.
+   	   Create a small java program 
+          Explain main method 
+                public : To call by JVM from anywhere we declare as public.
+                static : without existing object also JVM has to call this method so declared as static.
+                void : main method wont return anything to JVM hence declared as void.
+                main() : name of the method
+                (String [ ] args) :   These are command line arguments used to receive input from use
+
+  	   Compile - Shortcuts cntrl F11 or RunAs--> java Application --> green button
+   	   Show the class file ( Byte code- OS independant)
+    Explain the platform dependency:  
+
+# To view the Project folder in the system explorer:
+--------------------------------------------------
+   click on Project --> Properties --> show in System Explorer
+
+   ****************************************
+
+# Reserved keywords
+# datatypes
+# variables
+  - Declaration
+  - Intialisation
+# Naming convention standards:
+           Camel Case (camelCase): 
+In this standard, the first letter of the word always in small letter 
+    and after that each word starts with a capital letter.
+
+=================================================
+ CONTROL STATEMENTS:
+ -------------------
+Conditional Statements - IF, IF-ELSE
+Iterative/Looping statement - for, while
+Jumping statements - continue,break,rereturn 
+sum of digits:
+int number = 345;
+
+3 + 4 + 5 = 12
+
+// frame a generic condition
+whenever the quotinet becomes 0, stop executing
+
+while (quotient not equalto  0){
+
+Logic:
+
+345/10 --> quotient = 34 (int)
+       --> remainder = 5 ( store)
+
+
+34/10 --> quotient = 3
+      --> remainder = 4 ( store)
+
+3/10  --> quotient = 0
+      --> remainder = 3  ( store)
+         3%10  ( num < den) --> num is returned as remainder
+
+}
+
+*******************************************************
+
+Day2:08-08-2021
+----------------
+JUMPING STATEMENTS:
+#1 : break
+The break keyword is used to break out a for loop, a while loop or a switch block.
+pgm 1 : 
+print all the numbers as in the for loop. ( 1 to 10)
+But quit the loop when the value is 5
+		for (int i = 0; i < 7; i++) {
+			if(i==5) {
+			   break;
+			}
+		//	System.out.println(i);
+		}
+
+#2 : continue
+The continue keyword is used to end the current iteration in a for loop (or a while loop), 
+and continues to the next iteration
+pgm 2: Print only odd numbers // Skip all the even numbers
+
+		// print all odd numbers alone from 1 to 15
+		// skip all the even  numbers
+		
+		for (int i = 0; i <= 15; i++) {
+			if(i%2 == 0) {
+				continue;
+			}
+			System.out.println(i);
+		}
+
+#3 : return
+Takes the control out of the method.
+
+		for (int i = 0; i < 10; i++) {
+			System.out.println(i);
+			
+			if(!value) {
+				return;
+			}
+		}
+
+******************************************************
+
+CLASSES AND OBJECTS:
+-------------------
+
+Class : Blueprint for the object. 
+        IT is from this the objects are created/replicated
+
+Object: An entity that has both state and behavior.
+        It is an instance of the class
+
+variables / properties:
+----------------------
+
+Instance variables:
+Local variables:
+
+methods/actions:
+----------------
+  Access specifiers:
+Who can access this ? or The extent upto which it can be accessed
+To set access levels for classes, variables, methods, and constructors
+
+ClassRoom:
+==========
+- Create package name as week1.day2
+- Create a  new class as "MyMobile" under week2.day1
+- Create 2 public methods (makeCall() , sendMsg()) with simple print statement
+- Create a private method payBills() with simple print statement
+
+- Create main method
+- Create object for Mobile class and call the methods using the object
+- Execute the class and get the result in console
+
+- Create a new class as MyKid in week2.day1 package
+- Create an object for the previous class "MyMobile"
+- Try to access all the 3 methods of class "MyMobile"
+- Observe the access level of all the methods.( See if all the methods are called)
+
+# Methods with return values and arguments:
+
+*********************************************************
+
+
+ARRAYS:
+ - Arrays are used to store multiple values in a single variable
+ - Collection of similar type of elements which has contiguous memory location- 
+ - We can store only a fixed number of elements in a Java array.
+ - It doesn't grow its size at runtime.
+
+# Syntax:
+  dataType[] <variableName> = value
+
+# How do I Access the each Element of an Array?
+  -- By referring the index number
+
+  Array indexes start with 0: [0] --> refers the first element
+
+# To find the number of elements in an array
+        Length of the array: array.length;
+           length is a property
+# Finding the first and the last elements: 
+
+# How to access multiple elements at a time from array?
+  - for
+  - for each
+ 
+# sorting the array:
+
+# Exception : ArrayIndexOutOfBoundexception
+
+
+Classroom:
+Find the second largest number:
+Find the second smallest number:
+
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/classroom/arrays/MissingElementInAnArray.java
+
+int[] arr = {0,1,2,3,4,7,6,8};
+
+******************************************************************
+STRINGS:
+=======
+A String in Java is actually an object
+It contain methods that can perform certain operations on strings
+String str = "Welcome";
+
+String Length; str.length()
+
+Find a character in a String:str.charAt(index)
+
+Get the position of a character in the string:str.indexOf(character)
+
+Get the last position of a character in the string:str.lastIndexOf(character)
+
+Convert a string to a character array: str.toCharArray()
+
+Convert a string to words: str.split(delimiter)
+
+
