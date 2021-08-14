@@ -1,0 +1,1755 @@
+Day1 session:
+=============
+Why java?
+WORA - Write Once Run Anywhere
+     - PlatformInDependency ( .class/Byte code)
+
+IDE - netBeans, eclipse, IJ
+
+How much do I need JAVA for test automation?
+
+Step 1:
+Set up the enviroment: 
+    Install Java and Eclipse
+
+Eclipse: 
+   Explain about the editor, console.
+   Create a Maven project, Package, class
+   Groupid : 
+   Artifact id : 
+
+Naming conventions for class:(Pascal case)
+          - Pascal Case (PascalCase): In this the first letter of every word is in capital letter.
+   	   Create a small java program 
+          Explain main method 
+                public : To call by JVM from anywhere we declare as public.
+                static : without existing object also JVM has to call this method so declared as static.
+                void : main method wont return anything to JVM hence declared as void.
+                main() : name of the method
+                (String [ ] args) :   These are command line arguments used to receive input from use
+
+  	   Compile - Shortcuts cntrl F11 or RunAs--> java Application --> green button
+   	   Show the class file ( Byte code- OS independant)
+    Explain the platform dependency:  
+
+To view the Project folder in the system explorer:
+--------------------------------------------------
+   click on Project --> Properties --> show in System Explorer
+********************************************
+
+keywords
+datatypes
+variables
+  - Declaration
+  - Intialisation
+Naming convention standards:
+           Camel Case (camelCase): 
+In this standard, the first letter of the word always in small letter 
+    and after that each word starts with a capital letter.
+
+=================================================
+ CONTROL STATEMENTS:
+
+Conditional Statements - IF, IF-ELSE
+Iterative/Looping statement - for, while,
+
+
+Jumping statements -  
+sum of digits:
+int number = 345;
+
+3 + 4 + 5 = 12
+
+// frame a generic condition
+whenever the quotinet becomes 0, stop executing
+
+while (quotient not equalto  0){
+
+Logic:
+
+345/10 --> quotient = 34 (int)
+       --> remainder = 5 ( store)
+
+
+34/10 --> quotient = 3
+      --> remainder = 4 ( store)
+
+3/10  --> quotient = 0
+      --> remainder = 3  ( store)
+         3%10  ( num < den) --> num is returned as remainder
+
+}
+
+*******************************************************
+
+Day2:
+-----
+JUMPING STATEMENTS:
+#1 : break
+The break keyword is used to break out a for loop, a while loop or a switch block.
+pgm 1 : 
+print all the numbers as in the for loop. ( 1 to 10)
+But quit the loop when the value is 5
+		for (int i = 0; i < 7; i++) {
+			if(i==5) {
+			   break;
+			}
+		//	System.out.println(i);
+		}
+
+#2 : continue
+The continue keyword is used to end the current iteration in a for loop (or a while loop), 
+and continues to the next iteration
+pgm 2: Print only odd numbers // Skip all the even numbers
+
+		// print all odd numbers alone from 1 to 15
+		// skip all the even  numbers
+		
+		for (int i = 0; i <= 15; i++) {
+			if(i%2 == 0) {
+				continue;
+			}
+			System.out.println(i);
+		}
+
+#3 : return
+Takes the control out of the method.
+
+		for (int i = 0; i < 10; i++) {
+			System.out.println(i);
+			
+			if(!value) {
+				return;
+			}
+		}
+
+******************************************************
+
+CLASSES AND OBJECTS:
+-------------------
+
+Class : Blueprint for the object. 
+        IT is from this the objects are created/replicated
+
+Object: An entity that has both state and behavior.
+        It is an instance of the class
+
+variables / properties:
+----------------------
+
+Instance variables:
+Local variables:
+
+methods/actions:
+----------------
+  Access specifiers:
+Who can access this ? or The extent upto which it can be accessed
+To set access levels for classes, variables, methods, and constructors
+
+ClassRoom:
+==========
+- Create package name as week1.day2
+- Create a  new class as "MyMobile" under week2.day1
+- Create 2 public methods (makeCall() , sendMsg()) with simple print statement
+- Create a private method payBills() with simple print statement
+
+- Create main method
+- Create object for Mobile class and call the methods using the object
+- Execute the class and get the result in console
+
+- Create a new class as MyKid in week2.day1 package
+- Create an object for the previous class "MyMobile"
+- Try to access all the 3 methods of class "MyMobile"
+- Observe the access level of all the methods.( See if all the methods are called)
+
+
+
+Methods with return values and arguments:
+-----------------------------------------
+
+ARRAYS:
+ - Arrays are used to store multiple values in a single variable
+ - Collection of similar type of elements which has contiguous memory location- 
+ - We can store only a fixed number of elements in a Java array.
+ - It doesn't grow its size at runtime.
+
+# Syntax:
+  dataType[] <variableName> = value
+
+# How do I Access the each Element of an Array?
+  -- By referring the index number
+
+  Array indexes start with 0: [0] --> refers the first element
+
+# To find the number of elements in an array
+        Length of the array: array.length;
+           length is a property
+# Finding the first and the last elements: 
+
+# How to access multiple elements at a time from array?
+  - for
+  - for each
+ 
+# sorting the array:
+
+# Exception :
+
+
+Classroom:
+Find the second largest number:
+Find the second smallest number:
+
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/classroom/arrays/MissingElementInAnArray.java
+
+int[] arr = {1,2,3,4,7,6,8};
+
+
+Find the duplicates in 2 arrays:
+
+******************************************************************
+STRINGS:
+=======
+A String in Java is actually an object
+It contain methods that can perform certain operations on strings
+
+String Length:
+
+Find a character in a String:
+
+Get the position of a character in the string:
+
+Get the last position of a character in the string:
+
+Convert a string to a character array:
+
+Convert a string to words:
+
+
+********************************
+
+Get a part of the string:
+
+Replace a character:
+
+Replace all the integers, non integers:
+str.replaceAll("[\\d]", ""); - non integers
+str.replaceAll("[\\D]", ""); - integers
+
+Compare two strngs:
+.equals 
+*****************************
+
+ASSIGNMENTS:
+==========
+Assignment #1:
+===========
+--  Create a class "Calculator" with below methods
+	(a) add(int num1, int num2, int num3), it should return sum of num1+num2+num3
+	(b) sub(int num1, int num2), it should return subtraction of of num1-num2
+	(c) mul(double num1, double num2), it should return product of num1 * num2
+	(d) divide(float num1, float num2), it should return division of num1 / num2
+
+-- Create another class as MyCalculator and call all the methods from Calculator and print the results
+
+Assignment #2: (Arrays)
+=============
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/classroom/arrays/MissingElementInAnArray.java
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/assignments/mandatory/FindIntersection.java
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/classroom/arrays/PrintDuplicatesInArray.java
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/classroom/arrays/FindSecondLargest.java
+
+
+Assignment #3: (Strings)
+=============
+
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/assignments/mandatory/Palindrome.java
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/assignments/mandatory/ChangeOddIndexToUpperCase.java
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/assignments/optional/Anagram.java
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/classroom/string/CharOccurance.java
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/classroom/string/FindTypes.java
+https://github.com/TestLeafPages/SeleniumAssignments/blob/master/week1/day2/assignments/mandatory/ReverseEvenWords.java
+
+
+
+String Concatenation
+
+1. Length() length of the string/count of chrs - 
+2. charAt() 
+3. indexOf() 
+4. lastIndexOf()
+5. toCharArray()
+6. split()
+
+*****************
+( Yet to be done)
+subString
+7. replace
+8. replace integers, non integers
+str.replaceAll("[\\d]", ""); - non integers
+str.replaceAll("[\\D]", ""); - integers
+9. .equals
+9. toLowerCase
+10. toUpperCase 
+11. startsWith()
+12. endsWith()
+**********************************
+
+============================================================================================
+week2 Day1: 
+14-Aug-2021
+==========
+
+RoadMap of Todays class:
+-----------------------
+1. Selenium Introduction:
+   - Open source project
+   - Does only web automations
+   - Any browsers can be automated
+   - Desktop cannot be automated
+   - Mobile apps cannot be automated
+   - No API automation can be done but can call REST API calls
+
+
+Features:
+1. Supports multiple languages (Java, c#, Ruby, Python, Perl)
+2. Supports multiple platforms( Windows, Linux, MAC....)
+3. Supports multiple browsers ( Chrome, Firefox, Edge, Opera, Safari, IE)
+
+2. Selenium Internal architecture:
+
+Selenium Client Libraries : java, C#, Ruby, Perl
+W3C protocol: World Wide Web Consortium
+web Drivers ( Binary files - chromedriver.exe, firefox.exe,......)
+Browsers    ( Chrome browser, Firrefox browser...)
+
+3. How to set up your work environment?
+	Open a Maven Project
+	Update with the dependencies required in pom.xml
+          (Project Object Model or POM is the fundamental unit of work in Maven)
+	What is POM.xml?
+		The POM is an XML document contains information about the project and various configuration detail 
+	What are dependencies?
+		Dependencies are external JAR files (Java libraries) that the project uses
+        Maven dependendencies in your local repository --> .m2
+	Force update in case pom.xml throws an error.
+	
+
+READY TO CODE!!!!
+  *****Launch the browser*******
+
+1. WebDriverManager ( importance of WebDriverManager)
+2. Instantiate the driver:
+    ChromeDriver driver = new ChromeDriver();
+3. Launch the URL  
+   driver.get() 
+4. Get the title
+   driver.getTitle()
+5. Close the window 
+   driver.close()
+6. Maximise the window
+   driver.manage.windows.maximize();
+
+       **********  CLASS ROOM ***********
+
+   ELEMENT LOCATION STRATEGIES
+   ===========================
+
+6. Locate the webElements:
+   
+Locators( 8 Locators):
+1. Id         -  attribute / Use when id is unique (first preference) 
+              -  Not use id: 
+                  eg) id = ext-gen606 (Auto generated values)
+                           ext-gen602
+2. name        - Use this attribute, when a valid id is not present
+               - Not use name when there are duplicates
+3. classname   - Use this attribute, when a valid id/name is not present 
+               - Not use this attribute : when spaces are there
+               
+4. linkText    - <a> anchor tags + text
+
+5. Partial Link Text
+6. Tagname
+7. Xpath
+8. CSS Selector
+
+
+LEARN HTML:
+***********
+DOM: Document Object Model
+HTML tags:
+---------
+<html>
+<div>
+<a>
+<label>
+<input>
+<button>
+<table>
+<select>
+<option>
+
+
+Structure of HTML element:
+=========================
+1. Tag               : Tagname : purple text  / Mandatory   
+2. Attributes        : Orange                 / Optional
+3. Attribute values  : Blue text              / Optional
+4. Text              : Black                  / Optional
+
+Steps to locate a web element:
+=============================
+
+1. Find the web element
+
+driver.findElement(By by):
+  Find the first web element using the given method
+  Returns the first matching element on the current context
+
+  If no matching elements are found, 
+     throws NoSuchElementException 
+
+  1. driver - represents the browser
+  2. Web element - represents a DOM node
+
+(Note: implicitly wait)
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+2. Perform the action on it:
+
+   ********* Login Test case*******
+url: http://leaftaps.com/opentaps
+username: demosalesmanager
+password: crmsfa
+
+
+STEPS FOR LOGIN TEST CASE
+*************************
+
+// Step 1: Download and set the path 
+// Step 2: Launch the chromebrowser
+// Step 3: Load the URL
+// Step 4: Maximise the window
+// Step 5: Locate the username and type "demosalesmanager"
+// Step 6: Locate the password and type "crmsfa"
+// Step 7: Locate the Login button and click it
+
+// Step 9: Click CRM/SFA link
+
+
+DROP DOWN: 
+
+1. <select> tag
+2. <option> - drop down elements
+
+Step 1: Locate the web element 
+        driver.findElement()
+
+Step 2: Create an instance for the Select class 
+         Pass the dropdown webelement as the argument
+
+Step 3: Select the dropdown elements 
+
+		WebElement drop3 = driver.findElement(By.id("dropdown3"));
+		Select drpDwn3 = new Select(drop3);
+		drpDwn3.selectByValue("4");
+
+How to select a value in dropdown list?
+-----------------------------------------
+1. selectByVisibleText: selectByVisibleText(String arg0): void
+2. selectByIndex: selectByIndex(int arg0) : void
+3. selectByValue: selectByValue(String arg0) : void
+4. getOptions().size()
+
+Exception:
+NoSuchValueException
+
+ClassRooms for this week2-Day1 :
+******************************
+classroom#1 : Launch the URL
+classroom#2 : Login testcase
+classroom#3 : Create Lead Test case ( locate the elements, sendKeys(), clear())
+classroom#4 : Drop down (First 4 options) 
+              http://www.leafground.com/pages/Dropdown.html 
+classroom#5 : Create Lead Test case ( dropdowns)
+
+STEPS FOR CREATE LEAD TEST CASE
+*******************************
+// Step 1: Download and set the path 
+// Step 2: Launch the chromebrowser
+// Step 3: Load the URL
+// Step 4: Maximise the window
+// Step 5: Locate the username and type "demosalesmanager"
+// Step 6: Locate the password and type "crmsfa"
+// Step 7: Locate the Login button and click it
+// Step 8: Verify if the login process is successful
+// Step 9: Click CRM/SFA link
+
+// Step10: Click Leads tab 
+// Step11: Click CreateLead
+// Step12: Enter Company name
+// Step13: Enter FirstName
+// Step14: Enter LastName
+// Step15: In Marketing Campaign drop down, use index to choose the "Car and driver" option
+// Step16: In Industry drop down, use value to choose the "Health Care" option
+// Step17: In Marketing Campaign drop down, use index to choose the "Car and driver" option
+// Step18: In OwnerShip drop down, use VisibleText to choose the "Public Corporation" option
+// Step19: Enter Country Code as 3 (First clear and then use sendKeys())	
+// Step15: Click CreateLead button.
+// Step16: Get the title of the landing page and verify it is in ViewPage
+
+*******************************************************************
+14.08.2021 - Week2 day1
+ASSIGNMENTS:
+
+CreateLead:
+===========
+
+
+FaceBook:
+========
+// Step 1: Download and set the path 
+// Step 2: Launch the chromebrowser
+// Step 3: Load the URL https://en-gb.facebook.com/
+// Step 4: Maximise the window
+// Step 5: Add implicit wait
+// Step 6: Click on Create New Account button
+// Step 7: Enter the first name
+// Step 8: Enter the last name
+// Step 9: Enter the mobile number
+// Step 10: Enterthe password
+// Step 11: Handle all the three drop downs
+// Step 12: Select the radio button "Female" 
+            ( A normal click will do for this step) 
+
+
+SalesForce:
+// Step 1: Download and set the path 
+// Step 2: Launch the chromebrowser
+// Step 3: Load the URL 
+           https://www.salesforce.com/in/form/signup/freetrial-sales/?d=70130000000Enyk
+// Step 4: Maximise the window
+// Step 5: Add implicit wait
+// Step 6: Fill in all the text boxes
+// Step 7: Handle all the dropdowns
+// Step 8: Click the check box
+// Step 9: Close the browser
+*Note: No need click Start my freeTrial
+
+optional:
+https://www.opencart.com/index.php?route=account/register
+
+
+**********************************************************************
+Summary:
+Browser InterActions:
+findElement(s)
+maximize()
+getTitle()
+getCurrentUrl()
+getPageSource()
+close()
+quit()
+
+
+WebElement InterActions:
+
+sendKeys( )
+click()
+clear()
+
+getText()
+
+
+index() 
+value()
+text
+
+Jan  - visible text
+ஜன. 
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Summary of July-11-2021
+=======================
+Conditional Statements
+switch case 
+
+jumping Statements - continue, break
+                   - continue --> skip that condition alone 
+                   - break    --> comes out of the loop totally
+
+
+Introduction to – 3 Basic Concepts in Java
+a. Classes
+b. Creating Objects
+c. Basic data types
+
+class
+Object - Physical  entity
+
+1. How it looks? / property/ State  -- variables
+   -- colur
+   -- isFurry
+
+2. What is it going to do? action/Behaviour -- methods
+   --bark
+   -- canSmell
+   --canJump
+
+Class replicate the object/ Blueprint of the object
+
+method:
+========
+  method signature:
+    access specifier + returnType + methodName + arguments(if any)
+
+  Access specifiers:
+To set access levels for classes, variables, methods, and constructors
+Method level access specifiers:
+-------------------------------
+- public
+- protected
+- package ( default)
+- private 
+
+- Passing arguments - Value passed to the methods through arguments
+- Returning values  - Values are used from the methods by using return statement
+
+
+Access Specifier for class : public and package
+
+
+Instance Variables and Instance Methods :
+Accessed only thr objects
+So, create an instance and call these components
+
+ClassRoom:
+==========
+- Create package name as week1.day2
+- Create a  new class as "Mobile" under week2.day1
+- Create 2 public methods (makeCall() , sendMsg()) with simple print statement
+- Create a private method payBills() with simple print statement
+- Create main method
+
+- Create object for Mobile class and call the methods using the object
+- Execute the class and get the result in console
+
+
+- Create a new class as MyKid in week2.day1 package
+- Create an object for the previous class "Mobile"
+- Try to access all the 3 methods of class "Mobile"
+
+ARRAY:
+-----
+- An array is a collection of similar type of elements which has contiguous memory location-
+- We can store only a fixed set of elements in a Java array.
+- Array in Java is index-based
+
+Size Limit: We can store only the fixed size of elements in the array. 
+            It doesn't grow its size at runtime.
+            To solve this problem, collection framework is used in Java which grows automatically.
+- length of an array
+
+- Access through - for loop and for each
+
+Printing an array in reverse order:
+Sort the array
+Print in reverse oeder using for loop
+
+Class room:
+==========
+1. Create an character array 
+2. Print the length of the array
+3. Print all the elemnts of the array ( use for and for each loop)
+4. Print all the elemnts of the array in reverse order ( use for and for each loop)
+
+To print the last element of the array
+
+Exception: ArrayIndexOutOfBoundsException
+
+
+STRINGS:
+=======
+
+1. Length() length of the string/count of chrs - 
+2. charAt() 
+3. indexOf() 
+4. lastIndexOf()
+5. toCharArray()
+6. split()
+
+( Yet to be done)
+
+give a char - ask the position ( integer) --> index
+give a position of a char --> to get the char at that psosition
+
+( Yet to be done)
+
+subString
+7. replace
+8. replace integers, non integers
+str.replaceAll("[\\d]", ""); - non integers
+str.replaceAll("[\\D]", ""); - integers
+9. .equals
+9. toLowerCase
+10. toUpperCase 
+11. startsWith()
+12. endsWith()
+
+
+============================================================================================
+week2 Day1: 
+17-07-2021
+==========
+
+RoadMap of Todays class
+-----------------------
+
+1. Selenium Introduction
+Stable version
+Alpha version
+Beta version
+
+2. How to set up your work environment?
+	Open a Maven Project
+	Update with the dependencies required in pom.xml(Project Object Model or POM is the fundamental unit of work in Maven)
+        Maven dependendences in your local repository --> .m2
+	Force update in case pom.xml throws an error.
+	How to take a code for system explorer?
+3. System.setProperty()
+   WebDriverManager ( importance of WebDriverManager)
+
+		READY TO CODE!!!!
+
+3. Launch a website and interact with the webElements
+	A brief look up on the HTML and its elements
+	LOCATORS ( 8 Locators)
+
+4. Sample webApplication to implement all the above
+
+	URL: http://leaftaps.com/opentaps/control/main
+	Username : demosalesmanager
+	Password : crmsfa
+
+
+How do Selenium locate the web elemnet?
+Step 1:
+1. Right Click --> Inspect --> developer Tool
+2. Press F12 --> developer Tool
+3. When Right click is disabled,
+       More tools --> developer Tool ( cntrl + shift + I)
+       Press F12
+
+Step 2:
+Analyse the DOM ( Document Object Model)
+HTML Tags:
+========
+
+<tags>
+<html>   - root tag
+<a>      - anchor - hyperlink
+<button> - button
+<input>  - user can give an input
+<div>    - divider tag ( divides the whoilw web page into divisions)
+<span>   - similar to div tag
+<h1>,<h2>- header 
+<title>  - holds the title of that current window
+<iframe> - inline frames
+<img>    - holds the images
+<table>  - Represents the table
+<tr>     - table row
+<td>     - table column
+
+Structure of HTML element:
+=========================
+1. Tag        - ( Mandatory)( pink)
+2. Attributes - ( Orange)class, id, value, name etc
+3. Attribute values - (blue colour) Holds the values for the attributes
+4. Text       - (black) Not an attribute
+
+LOCATORS ( 8 locators)
+=====================
+1. id        - attribute;  Must be Unique; Should not have any autogenerated numbers in it.
+                           eg. ext-gen589, ext-gen603
+2. name      - attribute;  Must be Unique; Used When I cannot go for the id
+3. class     - attribute;  Must be Unique; Used When I cannot go for the id, name
+                           Should not have spaces in it
+4. linkText  - text()
+
+5. tagName   - <any HTML tags>
+6. XPath     - used when none of the attribute can be used
+7. Css Selector
+8. Partial Link Text - same as text but uses a partial text
+
+STEPS FOR LOGIN TEST CASE
+*************************
+
+// Step 1: Download and set the path 
+// Step 2: Launch the chromebrowser
+// Step 3: Load the URL
+// Step 4: Maximise the window
+// Step 5: Locate the username and type "demosalesmanager"
+// Step 6: Locate the password and type "crmsfa"
+// Step 7: Locate the Login button and click it
+// Step 8: Verify if the login process is successful
+// Step 9: Click CRM/SFA link
+
+
+STEPS FOR CREATE LEAD TEST CASE
+*******************************
+// Step 1: Download and set the path 
+// Step 2: Launch the chromebrowser
+// Step 3: Load the URL
+// Step 4: Maximise the window
+// Step 5: Locate the username and type "demosalesmanager"
+// Step 6: Locate the password and type "crmsfa"
+// Step 7: Locate the Login button and click it
+// Step 8: Verify if the login process is successful
+// Step 9: Click CRM/SFA link
+
+// Step10: Click Leads tab 
+// Step11: Click CreateLead
+// Step12: Enter Company name
+// Step13: Enter FirstName
+// Step14: Enter LastName
+// Step15: Click CreateLead button
+
+week2 Day2: 
+18-07-2021
+==========
+Topic 1:
+--------
+1. Maxixmise
+2. ImplicitlyWait( yet to be covered)
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+Topic 2:
+--------
+DropDown: Demo
+http://www.leafground.com/pages/Dropdown.html (first three options)
+
+How to select a value in dropdown list?
+-----------------------------------------
+1. selectByVisibleText: selectByVisibleText(String arg0): void
+2. selectByIndex: selectByIndex(int arg0) : void
+3. selectByValue: selectByValue(String arg0) : void
+4. getOptions().size()
+
+Exception:
+NoSuchValueException
+
+Class room 1 
+------------
+Implement Dropdowns on the following fields of Create Lead:
+
+Source - selectByValue()
+Marketing Campaign - selectByVisibleText()
+Industry - selectByIndex()
+Preferred Currency - selectByValue()
+Ownership - selectUsingVisibleText()
+State/Province - selectByIndex()
+Country - selectByVisibleText()
+
+
+Topic 3:
+--------
+Xpath
+
+When to use the Xpath?
+When I donot have any locators ( id, name,class...) to locate the web element
+
+Xpath doesnot have zero based index
+Index start with 1
+
+
+Types of XPath:
+***************
+
+A. Absolute Xpath:
+===================
+Xpath of username field in login page:
+/html/body/div[2]/div/div/form/p/input
+
+It contains the complete path from the Root Element to the desired element.
+
+- not a preffered choice
+- Unreliable because a small change in the UI, can change the absolute Xpath  
+
+
+B. Relative Xpath: (13 types of Xpath)
+==================
+We start from a reference element and reach the particular element
+Selenium by default chooses the first result out of multiple results
+Xpath of username field in login page:
+(eg)//input
+
+
+1. Attribute Based XPath:
+   ---------------------
+Syntax:
+//tagname[@attribute='attributeValue']
+
+//input[@id='username']
+//input[@class='inputLogin']
+//input[@type='password']
+
+2. Text Based Xpath:
+   ----------------
+Syntax:
+//tagname[text()='text value in DOM']
+
+//label[text()='Username']
+//h2[text()='Leaftaps Login']
+
+3. Partial Match Xpath:
+=======================
+
+a) Partial Text Based Xpath:
+---------------------------
+Syntax:
+//tagname[contains(text(),'Partial text in my DOM')]
+//h2[contains(text(),'Leaftaps')]
+
+a) Partial attribute Based Xpath:
+---------------------------------
+//tagname[contains(@attribute,'Partial value of the attribute')]
+
+//input[@type='password']
+//input[contains(@type,'pass')]
+
+4. Collections Based Xpath:
+===========================
+
+Syntax:
+(Any valid relative Xpath)[index]
+(Xpath)[index]
+
+(//input[@class='inputLogin'])[2]
+
+
+5. Advanced Xpath/ RelationShip based Xpath/ Axes based Xpath
+=============================================================
+
+8 types and its syntax:
+-----------------------
+
+1	Parent To child                 : parent xpath/tagName of child
+2	GrandParent to child Relation   : GrandParent xpath//tagName of grand child
+3	Child to parent                 : child xpath/parent::parent tagName
+4	GrandChild to Grand parent      : GrandChild xpath/ancestor::tagName of grand parent
+5	Elder Sibling toYounger Sibling : Elder sibling xpath/following-sibling::tagName of younger sibling
+6	Younger Sibling to elder Sibling: Younger sibling xpath/preceding-sibling::tagName of Elder sibling
+7	Elder cousin to Younger cousin  : Elder cousing xpath/following::tagName of younger Cousin
+8	Younger cousin to Elder cousin  : Younger cousin xpath/preceding::tagName of Elder cousin
+
+13 types of Xpath
+
+****************************************************************
+
+24.07.2021
+week3 day1
+OOPS Concepts:
+1.INHERITANCE
+2.POLYMORPHISM
+3.ABSTRACTION
+4.ENCAPSULATION
+
+Topic: INHERITANCE
+
+Inheritance in Java
+-------------------
+Classroom 1:
+Create 3 classes 
+- Mobile (methods: sendMsg(),makeCall(),saveContact() 
+- AndroidPhone (method: takeVideo)
+- SmartPhone (method: connectWhatsApp)
+
+Note:
+- AndroidPhone extends Mobile (Single Level Inheritance)
+- SmartPhone extends AndroidPhone ( Multilevel Inheritance)
+
+Execution class:
+- Create a class named MyPhone for execution ( must have a main method)
+- First, Create an object for AndroidPhone and see what all methods can be accessed ( Single Level Inheritance)
+- Then, Create object for SmartPhone class and see if you can call all the methods using this object ( Multilevel Inheritance)
+
+Inheritance in Java:
+-------------------
+Exception <ParentClass> for all the exceptions 
+
+Inheritance in Selenium
+-----------------------
+ChromiumDriver extends RemoteWebDriver				
+ChromeDriver extends ChromiumDriver				
+EdgeDriver extends ChromiumDriver				
+SafariDriver extends RemoteWebDriver				
+FireFoxDriver extends RemoteWebDriver
+(use F3(open declaration) and F4(to see the hierarchy))				
+
+POLYMORPHISM:
+------------
+Many forms of same entity
+
+1. methodOverRiding/Dynamic binding/RunTime Polymorphism
+2. methodOverloading/Static binding/compileTime polymorphism
+
+1.methodOverRiding:
+
+Audi - changeGear()- override
+
+2. methodOverloading/Static binding/compileTime polymorphism:
+
+Same name - different arguments/ diff num of args
+
+we can implement method overloading in two different ways:
+implementing two or more methods that have the same name but take different numbers of arguments
+implementing two or more methods that have the same name but take arguments of different types
+
+thod Overriding*
+In the Classroom 1, 
+ - Create the same method(takeVideo) in the SmartPhone class ( This is the same as in AndroidPhone class) 
+*(Here you are overriding the parent method)*
+ - Execute takeVideo() method using ChildClass object
+ - Ensure from which class the takeVideo() is executed.
+
+
+Classroom 3:
+*Method Overloading*
+Create class Calculator with below methods
+
+- 2 methods for add, 1 method with 2 int args , 1 method with 3 int args
+- 2 methods for multiply, 1 method with 2 int args, 1method with 1 int and 1 double args
+- 2 methods for subtract, 1 method with 2 int args , 1 method with 2 double args
+- 2 methods to divide , 1 method with 2 int args, 1 method with one double number and one int
+
+create object for the Calculator class and execute all the methods
+
+******************************************
+25.07.2021
+week3 day2
+
+Agenda :
+OOPS   : Abstraction
+            - Interface
+            - Abstract class
+COLLECTIONS: List 
+             Set
+
+***************************
+
+OOPS Concepts:
+*************
+
+Topic: ABSTRACTION
+ Abstraction is a process of hiding the implementation details 
+ Showing only functionality to the user.
+
+-- Interface ( 100% of abstraction)
+-- Abstract Class (0-100 % of abstraction )
+
+What is Interface?
+- design/Plan ()
+
+
+Abstract class : class without a body / no implementation
+Concrete class : class with a body / implementation
+
+1. Added Unimplemented methods inside the Interface
+2. Type the Documentation (use /** - Enter)
+3. Use the Keyword : implements 
+4. All the unimplemnted methods of an Interface has to be 
+   implemented in the implementation class 
+   (ie. the class that implemnts that Interface)
+5. The implementation class can have its own method in it too.
+6. Object instantiation cannot be done for an Interface.
+7. CLASS LEVEL MULTIPLE INHERITANCE IS NOT POSSIBLE
+   INTERFACE LEVEL MULTIPLE INHERITANCE IS POSSIBLE
+     ( do it with TWO INTERFACES)
+8. Inheritence - extends
+   A class can inherit and also implement, both at a time.
+
+
+Classroom 1:
+===========
+
+1. Design an Interface TaxCalculation with unimplemnted methods below:
+  public double incomeAdd(String name, double amount1, double amount2)
+  public double incomeReduce(String name, double amount1, double amount2)
+  public void publishValue()
+
+2. Design a second Interface IncomeCalculation with unimplemnted methods below:
+  void calcGrossIncome();
+  void removeDeductions();
+
+3. Implentation class: CalcIndividualsTax
+       Try to implement all the above learnings ( from point 1 to point 8) 
+
+Abstract :
+========
+
+Classroom2:
+     AbstractClass     :University
+     Methods           : pg()(implemented method),
+                         ug() (unimplemented method)
+
+     Class     : College extends University
+     Methods   :ug()
+*****************************
+class      extends     class
+class      implements     Interface
+Interface  extends  Interface
+*****************************
+
+Selenium examples:
+*******************
+
+WebDriver - Interface
+RemoteWebDriver implements WebDriver
+
+COLLECTIONS
+-----------
+
+1. List - single dimensional
+2. Set  - single dimensional
+3. Map  - 2 dimensional
+
+Array : cons
+    dynamic growth of the array size is not possible
+
+9000 bags on a day listed
+array - to store 9000
+ 
+12000 bags listed another day
+Array cannot be used for this
+
+List:
+-----
+1. Interface
+2. cannot instantiate
+3. Implmentation class : ArrayList
+4. Maintains the insertion order
+5. Can accept duplicates
+6. syntax:
+
+
+List<String> listName = new ArrayList<String>();
+List<Integer> listName = new ArrayList<Integer>();
+
+< > : Generics
+Wrapper Class:
+-------------
+int     Integer
+short   Short
+boolean Boolean
+char    Character
+double  Double
+String  String
+byte    Byte
+long    Long
+float   Float
+
+SET:
+1. Interface
+2. cannot instantiate
+3. Implmentation class : 
+     HashSet       : Random order of the data
+     LinkedHashSet : maintains the insertion Order
+     TreeSet       : ASCII order ( sorted)
+4. Maintains the insertion order
+5. Cannot accept duplicates
+6. syntax:
+
+*******
+Inheritance in Java
+
+Classroom1:
+     Interface :HardWare
+     Methods   :hardwareResources()
+
+     Interface :Software
+     Methods   :softwareResources()
+
+     Class     :Desktop
+     Methods   :desktopModel()
+
+Description:
+create 2 Interface and archieve multiple inheritance.
+
+Classroom2:
+     AbstractClass     :University
+     Methods           : pg()(implemented method), ug() (unimplemented method)
+
+     Class        :College extends University
+     Methods   :ug()
+
+Description:
+ug() is just a templete in University Abstract class and You have to implement the method ug() in College class.
+Execute both ug() & pg()
+
+
+*************************
+COLLECTIONS:
+The Collection interface is the interface which is implemented by all the classes in the collection framework. 
+It declares the methods that every collection will have
+
+List Interface:
+Maintains the insertion order
+Can have duplicates
+List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
+
+ArrayList:
+List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
+
+List in Selenium testCases:
+---------------------------
+
+Ajio 
+type : Bag
+Press : enter
+Get the list of bags
+Get the list of names
+Get the list of price 
+
+find the number of bags displayed
+Arrange the names  
+Get the minimum value 
+
+
+**************************************
+	// Returns:a list view of the specified array
+	//List<String> stooges = Arrays.asList("Larry", "Moe", "Curly");
+	
+	String str[] = new String[] { "Babu", "Hari", "Dhivya", "Bowya" };
+	List<String> strList = Arrays.asList(str);
+
+        // Add the array to list
+ List<T> list = new ArrayList<>();
+   	String str[] = new String[] { "Babu", "Hari", "Dhivya", "Bowya" }; 
+
+        Collections.addAll(list, str)
+
+*****************************************
+
+Set Interface
+It represents the unordered set of elements which doesn't allow us to store the duplicate items.
+Set is implemented by HashSet, LinkedHashSet, and TreeSet
+== 
+
+public class SetToArray {
+   public static void main(String args[]){
+      Set<String> set = new HashSet<String>();
+      set.add("Apple");
+      set.add("Orange");
+      set.add("Banana");
+      System.out.println("Contents of Set ::"+set);
+      String[] myArray = new String[set.size()];
+      set.toArray(myArray);
+      for(int i=0; i<myArray.length; i++){
+         System.out.println("Element at the index "+(i+1)+" is ::"+myArray[i]);
+      }
+   }
+}
+
+
+ArrayToSet:
+ Set<String> set = new HashSet<>(Arrays.asList(myArray));
+
+********************************************
+
+get a string
+print the duplicate chracters alone
+
+
+*****************************************
+Assignment:
+https://github.com/TestLeafPages/SelJulyPseudo/blob/master/week3/day2/classroom/RemoveDuplicates.java
+
+
+
+public class LearnString {
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String text = "Hello";
+        text = text.replace("l", "L");
+        System.out.println(text);
+    }
+
+****************************
+    Week4 AGENDA:
+
+
+IMPLICITLY WAIT
+
+Alerts
+Frames
+WindowHandling
+
+TakeScreenShot
+
+WebTable
+Actions 
+Explicitly Wait
+
+
+
+Ruto
+erail - webtable
+
+Week4 Day1: 31/07/2021
+AGENDA:
+
+1. IMPLICITLY WAIT
+2. Alerts
+3. Frames
+4. WindowHandling
+5. TakeScreenShot
+
+
+By implicitly waiting, 
+   WebDriver polls the DOM for a certain duration when trying to find any element. 
+   This can be useful when certain elements on the webpage are not available immediately and need some time to load.
+   The default setting is 0, meaning disabled. Once set, the implicit wait is set for the life of the session.
+
+findElement()
+findElements()
+
+
+       alpha 6:  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+       alpha 7:  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+
+ALERT:
+
+What is an Alert?
+-- POPUP dialog box
+warning, message, ask me a small confirmation
+(egs)
+1. simple Alert : Axis retail banking (Right click)
+2. Sweet Alert : 
+
+Types:
+1. Window based popup
+    --> gmail--> compose--> attachment--> dialog box pops up
+    --> ROBOT class
+
+2. Web based pop up:
+
+Types:
+1. Modal dialog
+
+****************
+  -- We cannot inspect the alert( cannot right-click)
+       (Because alerts are written in DOM using javaScript ( not HTML))
+  -- We cannot interact with the main page, untill the alert is handled
+
+Types of Modal dialog:
+---------------------
+1. Simple alert        --  OK            void accept(); 
+2. Confirmation Alert  -- Ok, Cancel -   void dismiss(); 
+3. Prompt Alert        -- textBox,-  void sendKeys(String keysToSend);
+                          Ok, cancel
+                       -- String getText() 
+                          - To get the text from the alert box
+How do handle an alert?
+-----------------------
+-- try to inspect : findElement() - can this be used? NO
+-- javaScript Alert and not found in DOM
+
+-- Handle using the Interface -- Alert
+   Implementation class of Alert interface --> RemoteAlert, EventFiringAlert
+
+Ok                   --> accept()  --> return - void  (Positive actions)
+cancel               --> dismiss()--> return - void   (Negative actions)
+To enter the text    --> sendKeys()--> return - void
+To get the text(msg) --> getText() --> returns String
+
+
+ALERT EXCEPTIONS:
+----------------
+1)
+// Throws org.openqa.selenium.NoAlertPresentException
+   Occurs when trying to interact with the alert that is not active curently
+
+2)
+// org.openqa.selenium.UnhandledAlertException
+   Occurs when Alert is still alive and	
+       I try to access the main window
+
+can a page has multiple alerrts?
+
+ex:- AJIO Application
+     alert is not comming same page
+       --- while landing page
+       --- while search item
+
+2. Non-Modal Dialog:(sweet Alert)
+*********************************
+
+egs: IRCTC, tatcliq
+
+https://www.tatacliq.com/
+      https://www.irctc.co.in/nget/train-search
+
+// Handled as a normal webElement
+// Can write Xpath
+// Can use findElement()
+
+
+*************************************
+ClassRoom for Alerts in LeafGrounds : 
+  First two cases alone
+**************************************
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+FRAMES:
+
+-- DOM inside a DOM
+
+How to identify a Frame is present?
+1. look for iframes ot frames tag in your DOM
+2. Inspect the element
+
+How does it appear in DOM?
+
+
+1. <iframe> -- inline frame (floating frame)
+2. <frame>  -- static frame/immovable
+
+http://www.leafground.com/pages/frame.html
+
+What if my element is inside a frame and try to access it without enetering the frame?
+
+ClickMe -- first option
+Throws Exception: NoSuchElementException
+             
+
+// How to access the frame?
+
+1. Select my frame through index
+2. Select my frame attribute -- id/name
+3. Select my frame as normal as a webelement (Xpath)	
+
+
+RETURNING THE CONROL TO THE PREVIOUS LEVELS :
+DefaultContent -- Frame2 control to main DOM  (Top of the DOM)
+parentFrame    -- Frame2 to Frame1 ( One level higher)
+
+To think:
+
+In case 3, to find the number of frames, it returns 3. 
+But in the DOM, it gives 7 when searched. 
+WHY?
+
+EXCEPTIONS OF FRAMES:
+
+NoSuchFrameException
+     (NoSuchElementException) - element is loaded in the DOM. But not visible
+    
+
+ClassRoom for Alerts and Frames:
+--------------------------------
+
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm
+Click Try It Button
+Click OK/Cancel in the alert
+Confirm the action is performed correctly by verifying the text !!
+ Hint
+
+Switch to the frame
+Then click Try It with xpath
+Switch to the alert
+Then perform accept / dismiss
+Get the text using id 
+Verify the text based on the action
+
+
+
+
+Assignment: 
+1. serviceNow
+2. https://chercher.tech/practice/frames-example-selenium-webdriver
+
+
+**********************************************************************************************
+
+WINDOW HANDLING:
+
+webelements: locators (unique)
+frames : index / nameor Id/ webElement
+windows :
+
+title
+URL
+index
+id
+<a>
+href
+
+What is a window handle? 
+A window handle is a unique identifier that holds the address of all the windows. 
+This is basically a pointer to a window, which returns the string value. 
+This window handle function helps in getting the handles of all the windows.
+ It is guaranteed that each browser will have a unique window handle.
+
+
+getWindowhandle(): helps in getting the window handle of the current window
+getWindowhandles(): helps in getting the handles of all the windows opened
+
+-- set
+
+How do you confirm the order of windows
+
+Array
+  
+List
+
+Set
+
+cant we have list directy
+
+
+
+driver.close();   - closes the current active window
+driver.quit();  - closes all the related windows
+
+Methods needed to handle multiple windows:
+
+Exceptions:
+org.openqa.selenium.NoSuchWindowException: 
+ org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+
+Alerts and Window handling
+---------------------------
+1. Load https://www.irctc.co.in/
+2. Click on OK button in the dialog  
+3. Click on FLIGHTS link            
+4. Go to the Flights tab
+5. Print the customer care email id
+6. Close the First tab(Train ticket booking) alone
+
+TAKE SCREEN SHOT of the current window:
+--------------------------------------
+
+Takes the screenshot of the visible portion of the window.
+
+	 File src1 = driver.getScreenshotAs(OutputType.FILE);
+	 File dst = new File("./snaps/seat.png");
+	 FileUtils.copyFile(src1, dst);
+
+********************************************************************************
+Week4 - day2
+Sunday : 31-July-2021
+AGENDA:
+------
+
+1. WebTable
+2. Actions 
+3. Explicitly Wait
+
+
+1. WebTable:
+************
+explain using eRailsorting using tables/xpath
+leafgrounds - tables Classroom
+
+
+To think:
+If the column is not same for all the rows, how do you handle?
+eg: redBus calendar
+
+
+2. Advanced User interactions:
+-------------------------------
+
+MouseHover
+doubleClick
+Rightclick
+Draganddrop
+MultipleSelection ( Holding control button)
+
+Class : Actions
+Exceptions are not handled in actions class.
+So exceptions are not seen even if the locator is wrong.
+
+
+Step1 : Identify the web element which needs a advanced inyeraction
+step 2: Create an instance for the actions class
+Step 3: Perform the action on the webelement using the insatnce created.
+        .perform() method is mandatory;
+
+PROJECT:
+
+//Load the uRL https://www.amazon.in/
+//search as oneplus 9 pro 
+//Get the price of the first product
+// Print the number of customer ratings for the first displayed product
+// Mouse Hover on the stars
+// Get the percentage of ratings for the 5 star.
+// Click the first text link of the first image
+// Take a screen shot of the product displayed
+// Click 'Add to Cart' button
+// Get the cart subtotal and verify if it is correct.
+
+*Assignment 4:Myntra*
+1) Open https://www.myntra.com/
+2) Mouse over on MeN 
+3) Click Jackets 
+4) Find the total count of item 
+5) Validate the sum of categories count matches
+6) Check jackets
+7) Click + More option under BRAND	
+8) Type Duke and click checkbox
+9) Close the pop-up x
+10) Confirm all the Coats are of brand Duke
+11) Sort by Better Discount
+12) Find the price of first displayed item
+13) Mouse over on size of the first item
+14) Click on WishList Now
+15) Close Browser
+
+
+// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
