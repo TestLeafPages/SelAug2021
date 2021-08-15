@@ -1,0 +1,68 @@
+package week2.day2;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LoginXpath {
+
+	public static void main(String[] args) {
+		// Step 1: Download and set the path
+		WebDriverManager.chromedriver().setup();
+		// Step 2: Launch the chromebrowser
+		ChromeDriver driver = new ChromeDriver();
+		// Step 3: Load the URL
+		driver.get("http://leaftaps.com/opentaps/control/main");
+		// Step 4: Maximise the window
+		driver.manage().window().maximize();
+		
+		// waits for 10 secs if the element is not in the DOM
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		// Step 5: Locate the Username and enter the username as demosalesmanager
+		driver.findElement(By.xpath("//input[@name='USERNAME']")).sendKeys("demosalesmanager");
+		
+		// Step 6: Locate the password(webelement) and enter the password as crmsfa
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("crmsfa");
+		
+		// Step 7: Locate the Login button and click on it
+		driver.findElement(By.xpath("//input[@class='decorativeSubmit']")).click();
+		
+		String userNameText = driver.findElement(By.xpath("//label[text()='Username']")).getText();
+		System.out.println(" label :" + userNameText);
+		
+		
+		// Step 8: Click on the crm/sfa link 
+		driver.findElement(By.xpath("//a[contains(text(),'/SFA')]")).click();
+    	// 	driver.findElement(By.xpath(null))
+		
+
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
