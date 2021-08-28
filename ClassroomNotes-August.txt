@@ -924,518 +924,202 @@ SET:
 
 *******
 
+Week4 Day1: 28/08/2021
+AGENDA:
+
+1. Alerts
+2. Frames
+3. WindowHandling
+4. TakeScreenShot
+
+ALERTS:
+-------
+  web based dialog
+  pop up or dialog 
+  warning msg/ prompt/ Information
+
+1. When an alert is currently active, the main page cannot be interacted.
+2. We cannot inspect an Alert
+3. Not seen in the DOM/  no locators as a normal webElement 
+4. Done through the JavaScript
+5. Cannot have multiple alerts at a time
+6. We canno ttake a screen shot of an alert.
+
+Types:
+1. Modal dialog /Alert
+
+   Types:
+      1. Simple Alert       - Ok button - dismiss()/accept()
+      2. Confirmation Alert - OK button and Cancel button
+      3. Prompt Alert       - OK button and Cancel button, textbox
+
+HANDLING THE ALERT:
+
+   Alert - Interface
+        Implementation class : RemoteAlert
+
+  void dismiss();  Cancel
+  void accept();   Ok button
+  String getText(); To get text from alert
+  void sendKeys(String keysToSend); To type in the text
+
+-- Automaticaly switches the control to the current active dialog
+
+   driver.switchTo().alert();
+
+Step 1: switch the control to the current active dialog (SWITCH)
+Step 2: Use the interface methods to handle the alert   (HANDLE)
 
 
+ALERT EXCEPTIONS:
+----------------
+1)
+// Throws org.openqa.selenium.NoAlertPresentException
+      * If the dialog cannot be found
+      * Occurs when trying to interact with the alert that is not active curently
+
+2)
+// org.openqa.selenium.UnhandledAlertException
+       Occurs when Alert is still alive and	
+       I try to access the main window
+  
+Classroom1 :
+-----------
+http://www.leafground.com/pages/Alert.html
+ Try to handle frst three alerts in this page.
+ For the Confirmation alert, verify of the OK/Cancel button is clicked
+
+2. Non -Modal dialog/sweet alert:
+      - Can be inspected
+      - Can handle as a normal webElement
+
+egs: IRCTC, tatcliq
+
+      https://www.tatacliq.com/
+      https://www.irctc.co.in/nget/train-search
+
+***********************************
+
+FRAMES:
+-------
+
+1. DOCUMENT INSIDE ANOTHER DOCUMENT (DOM inside a DOM)
+2. <html> root tag for each frames
+
+How does it appear in DOM?
+
+1. <iframe> -- inline frame (floating frame)
+2. <frame>  -- static frame/immovable
+
+http://www.leafground.com/pages/frame.html
+
+Main Document
+<html>
+
+     Frames:
+      <html>
+
+       Step 1: Switch into the frame
+       Step 2: Locate the webelement
+
+            BUTTON
+   Come out of the frame
+
+webElement in main page
 
 
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Identify the frame :
+  step1 : Switch :
+          driver.switchTo().frame()
+         (i) int - index
+         (ii) String - id or name 
+         (iii) WebElement - locator
+          
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Summary of July-11-2021
-=======================
-Conditional Statements
-switch case 
-
-jumping Statements - continue, break
-                   - continue --> skip that condition alone 
-                   - break    --> comes out of the loop totally
-
-
-Introduction to – 3 Basic Concepts in Java
-a. Classes
-b. Creating Objects
-c. Basic data types
-
-class
-Object - Physical  entity
-
-1. How it looks? / property/ State  -- variables
-   -- colur
-   -- isFurry
-
-2. What is it going to do? action/Behaviour -- methods
-   --bark
-   -- canSmell
-   --canJump
-
-Class replicate the object/ Blueprint of the object
-
-method:
-========
-  method signature:
-    access specifier + returnType + methodName + arguments(if any)
-
-  Access specifiers:
-To set access levels for classes, variables, methods, and constructors
-Method level access specifiers:
--------------------------------
-- public
-- protected
-- package ( default)
-- private 
-
-- Passing arguments - Value passed to the methods through arguments
-- Returning values  - Values are used from the methods by using return statement
-
-
-Access Specifier for class : public and package
-
-
-Instance Variables and Instance Methods :
-Accessed only thr objects
-So, create an instance and call these components
-
-ClassRoom:
-==========
-- Create package name as week1.day2
-- Create a  new class as "Mobile" under week2.day1
-- Create 2 public methods (makeCall() , sendMsg()) with simple print statement
-- Create a private method payBills() with simple print statement
-- Create main method
-
-- Create object for Mobile class and call the methods using the object
-- Execute the class and get the result in console
-
-
-- Create a new class as MyKid in week2.day1 package
-- Create an object for the previous class "Mobile"
-- Try to access all the 3 methods of class "Mobile"
-
-ARRAY:
------
-- An array is a collection of similar type of elements which has contiguous memory location-
-- We can store only a fixed set of elements in a Java array.
-- Array in Java is index-based
-
-Size Limit: We can store only the fixed size of elements in the array. 
-            It doesn't grow its size at runtime.
-            To solve this problem, collection framework is used in Java which grows automatically.
-- length of an array
-
-- Access through - for loop and for each
-
-Printing an array in reverse order:
-Sort the array
-Print in reverse oeder using for loop
-
-Class room:
-==========
-1. Create an character array 
-2. Print the length of the array
-3. Print all the elemnts of the array ( use for and for each loop)
-4. Print all the elemnts of the array in reverse order ( use for and for each loop)
-
-To print the last element of the array
-
-Exception: ArrayIndexOutOfBoundsException
-
-
-STRINGS:
-=======
-
-1. Length() length of the string/count of chrs - 
-2. charAt() 
-3. indexOf() 
-4. lastIndexOf()
-5. toCharArray()
-6. split()
-
-( Yet to be done)
-
-give a char - ask the position ( integer) --> index
-give a position of a char --> to get the char at that psosition
-
-( Yet to be done)
-
-subString
-7. replace
-8. replace integers, non integers
-str.replaceAll("[\\d]", ""); - non integers
-str.replaceAll("[\\D]", ""); - integers
-9. .equals
-9. toLowerCase
-10. toUpperCase 
-11. startsWith()
-12. endsWith()
-
-
-============================================================================================
-week2 Day1: 
-17-07-2021
-==========
-
-RoadMap of Todays class
------------------------
-
-1. Selenium Introduction
-Stable version
-Alpha version
-Beta version
-
-2. How to set up your work environment?
-	Open a Maven Project
-	Update with the dependencies required in pom.xml(Project Object Model or POM is the fundamental unit of work in Maven)
-        Maven dependendences in your local repository --> .m2
-	Force update in case pom.xml throws an error.
-	How to take a code for system explorer?
-3. System.setProperty()
-   WebDriverManager ( importance of WebDriverManager)
-
-		READY TO CODE!!!!
-
-3. Launch a website and interact with the webElements
-	A brief look up on the HTML and its elements
-	LOCATORS ( 8 Locators)
-
-4. Sample webApplication to implement all the above
-
-	URL: http://leaftaps.com/opentaps/control/main
-	Username : demosalesmanager
-	Password : crmsfa
-
-
-How do Selenium locate the web elemnet?
-Step 1:
-1. Right Click --> Inspect --> developer Tool
-2. Press F12 --> developer Tool
-3. When Right click is disabled,
-       More tools --> developer Tool ( cntrl + shift + I)
-       Press F12
-
-Step 2:
-Analyse the DOM ( Document Object Model)
-HTML Tags:
-========
-
-<tags>
-<html>   - root tag
-<a>      - anchor - hyperlink
-<button> - button
-<input>  - user can give an input
-<div>    - divider tag ( divides the whoilw web page into divisions)
-<span>   - similar to div tag
-<h1>,<h2>- header 
-<title>  - holds the title of that current window
-<iframe> - inline frames
-<img>    - holds the images
-<table>  - Represents the table
-<tr>     - table row
-<td>     - table column
-
-Structure of HTML element:
-=========================
-1. Tag        - ( Mandatory)( pink)
-2. Attributes - ( Orange)class, id, value, name etc
-3. Attribute values - (blue colour) Holds the values for the attributes
-4. Text       - (black) Not an attribute
-
-LOCATORS ( 8 locators)
-=====================
-1. id        - attribute;  Must be Unique; Should not have any autogenerated numbers in it.
-                           eg. ext-gen589, ext-gen603
-2. name      - attribute;  Must be Unique; Used When I cannot go for the id
-3. class     - attribute;  Must be Unique; Used When I cannot go for the id, name
-                           Should not have spaces in it
-4. linkText  - text()
-
-5. tagName   - <any HTML tags>
-6. XPath     - used when none of the attribute can be used
-7. Css Selector
-8. Partial Link Text - same as text but uses a partial text
-
-STEPS FOR LOGIN TEST CASE
-*************************
-
-// Step 1: Download and set the path 
-// Step 2: Launch the chromebrowser
-// Step 3: Load the URL
-// Step 4: Maximise the window
-// Step 5: Locate the username and type "demosalesmanager"
-// Step 6: Locate the password and type "crmsfa"
-// Step 7: Locate the Login button and click it
-// Step 8: Verify if the login process is successful
-// Step 9: Click CRM/SFA link
-
-
-STEPS FOR CREATE LEAD TEST CASE
-*******************************
-// Step 1: Download and set the path 
-// Step 2: Launch the chromebrowser
-// Step 3: Load the URL
-// Step 4: Maximise the window
-// Step 5: Locate the username and type "demosalesmanager"
-// Step 6: Locate the password and type "crmsfa"
-// Step 7: Locate the Login button and click it
-// Step 8: Verify if the login process is successful
-// Step 9: Click CRM/SFA link
-
-// Step10: Click Leads tab 
-// Step11: Click CreateLead
-// Step12: Enter Company name
-// Step13: Enter FirstName
-// Step14: Enter LastName
-// Step15: Click CreateLead button
-
-week2 Day2: 
-18-07-2021
-==========
-Topic 1:
---------
-1. Maxixmise
-2. ImplicitlyWait( yet to be covered)
-driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-Topic 2:
---------
-DropDown: Demo
-http://www.leafground.com/pages/Dropdown.html (first three options)
-
-How to select a value in dropdown list?
------------------------------------------
-1. selectByVisibleText: selectByVisibleText(String arg0): void
-2. selectByIndex: selectByIndex(int arg0) : void
-3. selectByValue: selectByValue(String arg0) : void
-4. getOptions().size()
-
 Exception:
-NoSuchValueException
+    
+    NoSuchElementException
+    NoFrameElementException
 
-Class room 1 
-------------
-Implement Dropdowns on the following fields of Create Lead:
+1. NoSuchElementException:
+   - Wrong XPath/Locator
+   - element is not loaded in DOM
+   - when the element is inside a frame, and control is not inside the frame
+ 
+Commands needed for frame:
 
-Source - selectByValue()
-Marketing Campaign - selectByVisibleText()
-Industry - selectByIndex()
-Preferred Currency - selectByValue()
-Ownership - selectUsingVisibleText()
-State/Province - selectByIndex()
-Country - selectByVisibleText()
+driver.switchTo().frame(nestedFrame1);
+driver.switchTo().defaultContent(); 
+driver.switchTo().parentFrame();
 
+RETURNING THE CONROL TO THE PREVIOUS LEVELS :
+DefaultContent -- Frame2 control to main DOM  (Top of the DOM)
+parentFrame    -- Frame2 to Frame1 ( One level higher - previous frame)
 
-Topic 3:
---------
-Xpath
+Frames:
+ServiceNow:
+Instance URL: https://dev113545.service-now.com/
+Username: admin
+Password: w6hnF2FRhwLC
 
-When to use the Xpath?
-When I donot have any locators ( id, name,class...) to locate the web element
+****************************************************
 
-Xpath doesnot have zero based index
-Index start with 1
+WindowHandling:
+--------------
 
+Normal webElement:  8 locators
+Frames           :  3 options
+Windows          :  window handle
 
-Types of XPath:
-***************
+                    Window handle:(String):Unique
+To switch the control to the desired window:
+-------------------------------------------
+driver.switchTo().window(windowHandle);
 
-A. Absolute Xpath:
-===================
-Xpath of username field in login page:
-/html/body/div[2]/div/div/form/p/input
-
-It contains the complete path from the Root Element to the desired element.
-
-- not a preffered choice
-- Unreliable because a small change in the UI, can change the absolute Xpath  
-
-
-B. Relative Xpath: (13 types of Xpath)
-==================
-We start from a reference element and reach the particular element
-Selenium by default chooses the first result out of multiple results
-Xpath of username field in login page:
-(eg)//input
+       getWindowHandle() - Current active (single) window
+                         - return : String
+       getWindowHandles() - Set of Strings
 
 
-1. Attribute Based XPath:
-   ---------------------
-Syntax:
-//tagname[@attribute='attributeValue']
+4 windows:
+Set - get(2) 
+1
+2
+3
+4
 
-//input[@id='username']
-//input[@class='inputLogin']
-//input[@type='password']
+List, Set - Collections:
+   Set  - get a specific value based on index - NO
+1. getWindowHandles()
 
-2. Text Based Xpath:
-   ----------------
-Syntax:
-//tagname[text()='text value in DOM']
+     1. Set of strings
+     2. Convert the Set to List 
+     3. list.get(window) 
 
-//label[text()='Username']
-//h2[text()='Leaftaps Login']
+2. driver.switchTo().window(windowHandle);
 
-3. Partial Match Xpath:
-=======================
+Exceptions:
+org.openqa.selenium.NoSuchWindowException
 
-a) Partial Text Based Xpath:
+*************************************
+ClassRoom:
+
+Alerts and Window handling
 ---------------------------
-Syntax:
-//tagname[contains(text(),'Partial text in my DOM')]
-//h2[contains(text(),'Leaftaps')]
-
-a) Partial attribute Based Xpath:
----------------------------------
-//tagname[contains(@attribute,'Partial value of the attribute')]
-
-//input[@type='password']
-//input[contains(@type,'pass')]
-
-4. Collections Based Xpath:
-===========================
-
-Syntax:
-(Any valid relative Xpath)[index]
-(Xpath)[index]
-
-(//input[@class='inputLogin'])[2]
+1. Load https://www.irctc.co.in/
+2. Click on OK button in the dialog  
+3. Click on FLIGHTS link            
+4. Go to the Flights tab
+5. Print the customer care email id
+6. Close the First tab(Train ticket booking) alone
+*****************************
 
 
-5. Advanced Xpath/ RelationShip based Xpath/ Axes based Xpath
-=============================================================
+How can I handle browser notification?
+--------------------------------------
 
-8 types and its syntax:
------------------------
+ChromeOptions options = new ChromeOptions();
+options.addArguments('--disable-notifications");
+ChromeDriver driver = new ChromeDriver(options);
 
-1	Parent To child                 : parent xpath/tagName of child
-2	GrandParent to child Relation   : GrandParent xpath//tagName of grand child
-3	Child to parent                 : child xpath/parent::parent tagName
-4	GrandChild to Grand parent      : GrandChild xpath/ancestor::tagName of grand parent
-5	Elder Sibling toYounger Sibling : Elder sibling xpath/following-sibling::tagName of younger sibling
-6	Younger Sibling to elder Sibling: Younger sibling xpath/preceding-sibling::tagName of Elder sibling
-7	Elder cousin to Younger cousin  : Elder cousing xpath/following::tagName of younger Cousin
-8	Younger cousin to Elder cousin  : Younger cousin xpath/preceding::tagName of Elder cousin
-
-13 types of Xpath
-
-****************************************************************
-
-1. Regular Expressions - video
-2. Element and Browser verifications - video
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+******************************
