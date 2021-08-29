@@ -1123,3 +1123,106 @@ options.addArguments('--disable-notifications");
 ChromeDriver driver = new ChromeDriver(options);
 
 ******************************
+*****************************
+Week4 : day2:
+August 29.08.2020
+
+
+WebTable
+Actions 
+  KeyBoard and Mouse events
+
+
+PROJECT ( MINIMUM 1.30 hrs)
+
+
+Explicit Wait
+
+WebTable:
+--------
+
+How to handle?
+tags:
+<table> - main table
+<tbody> - table body
+<tr> - table rows
+<th> - table header
+<td> - table data
+
+Method1:
+Through path:
+Number of rows:
+//table[@id='table_id']//tr 
+
+Number of columns:
+//table[@id='table_id']//tr[2]/td
+
+Method 2:
+Step 1 : Find the table ( locate the table) - webelement - table
+Step 2 : Find the rows -- table.searchRow
+Step 3 : Find the column : for a particular row, get the coulmncount 
+
+Erails:
+https://erail.in/
+1. Enter the from station as ms
+2. Enter the To stationa as mdu
+3. Uncheck the Sort By date
+4. Count the number of trains available
+5. Get the names of all the train and store it in a list
+6. Sort the train names 
+   use Collections.sort()
+
+Actions :
+********
+Mouse Actions:
+   drag and drop to anther elemnt
+   drag and drop by position
+   Mouse Hover
+   Double click
+   Right click
+
+KeyBoard Action:
+Choose all contents ( cntrl a)
+	click and hold
+	move to the elemnt
+	release the mouse
+	
+Project Work 1:
+Project :Myntra
+1) Open https://www.myntra.com/
+2) Mouse hover on MeN 
+3) Click Jackets 
+4) Find the total count of item 
+5) Validate the sum of categories count matches
+6) Check jackets
+7) Click + More option under BRAND	
+8) Type Duke and click checkbox
+9) Close the pop-up x
+10) Confirm all the Coats are of brand Duke
+    Hint : use List 
+11) Sort by Better Discount
+12) Find the price of first displayed item
+Click on the first product
+13) Take a screen shot
+14) Click on WishList Now
+15) Close Browser
+
+Project Work 2:
+//Load the uRL https://www.amazon.in/
+//search as oneplus 9 pro 
+//Get the price of the first product
+// Print the number of customer ratings for the first displayed product
+// Mouse Hover on the stars
+// Get the percentage of ratings for the 5 star.
+// Click the first text link of the first image
+// Take a screen shot of the product displayed
+// Click 'Add to Cart' button
+// Get the cart subtotal and verify if it is correct.
+
+********************************************************
+
+	String repItem = items.replaceAll("[^0-9]", "");
+	int count = Integer.parseInt(repItem);
+	System.out.println("Total count: " + count);
+
+
