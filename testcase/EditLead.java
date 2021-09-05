@@ -1,18 +1,16 @@
 package testcase;
 
-import java.time.Duration;
+import java.io.IOException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class EditLead extends BaseClass{
+public class EditLead extends BaseClass {
 
 	@Test
 	public void runEdit() throws InterruptedException {
-		
+
 		driver.findElement(By.linkText("Find Leads")).click();
 		driver.findElement(By.xpath("//span[text()='Phone']")).click();
 		driver.findElement(By.xpath("//input[@name='phoneNumber']")).sendKeys("99");
@@ -22,12 +20,11 @@ public class EditLead extends BaseClass{
 		driver.findElement(By.linkText("Edit")).click();
 		driver.findElement(By.id("updateLeadForm_companyName")).sendKeys("TCS");
 		driver.findElement(By.name("submitButton")).click();
-		
+
+	}
+	
+	@DataProvider
+	public String[][] sendData() throws IOException {
+		return ReadExcel.readData("EditLead");
+	}
 }
-}
-
-
-
-
-
-
